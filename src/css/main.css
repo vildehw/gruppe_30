@@ -1,7 +1,12 @@
 body {
   background-color: aqua;
-  color: white;
+  color: rgb(240, 26, 26);
   border-radius: 4%;
+ 
+}
+
+h1 {
+  margin-left:500px;
 }
 
 /*# sourceMappingURL=main.css.map */
