@@ -1,6 +1,128 @@
-body {
-    background-color: aqua; 
-    color: white; 
-    border-radius: 4%;
-    padding: left 50px;
+$red: #DA291C;
+$yellow: #FFD700;
+$blue: #78e7f3;
+$green: #00AF4D;
+$white: #FFFFFF;
+$black: #000000;
+$gray: #ededed;
+$graydark: #8f8f8f;
+$maxwidth: 1200px;
+$rootsize: 20px;
+
+:root {
+  --red: #{$red};
+  --yellow: #{$yellow};
+  --blue: #{$blue};
+  --green: #{$green};
+  --white: #{$white};
+  --black: #{$black};
+  --gray: #{$gray};
+  --graydark: #{$graydark};
+  --maxwidth: #{$maxwidth};
+  --rootsize: #{$rootsize};
 }
+
+body{
+  background-color: var(--white);
+  font-family: sans-serif;
+  font-size: var(--rootsize);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+div.container{
+  width: 100%;
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 1px solid var(--graydark);
+  margin-top: 3rem;
+
+  h1 {
+    width: 100%;
+    max-width: 250px;
+    color: var(--graydark);
+    text-transform: uppercase;
+  }
+}
+
+nav{
+  display: flex;
+  width: 100%;
+  margin-top: 3rem;
+
+  button{
+    background-color: var(--gray);
+    color: var(--graydark);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: large;
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--graydark);
+    border-bottom: 0;
+    display: inline-block;
+    transition: ease-in-out .2s;
+    margin-right: 1rem;
+    font-size: 1.2vw;
+
+    &:hover{
+      color: var(--yellow);
+      border-color: var(--yellow);
+    }
+
+    &.active{
+      background-color: var(--blue);
+      border-color: var(--blue);
+      color: var(--white);
+
+      &:hover{
+        color: var(--white);
+      }
+    }
+  }
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0rem;
+  justify-content: space-between;
+
+  h2{
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  article.product-card{
+    background:var(--white) ;
+    border: .1rem solid var(--gray);
+    border-top: .5rem solid var(--blue);
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: var(--graydark);
+    margin-bottom: 2rem;
+
+    > * {
+      display: block;
+      clear: both;
+    }
+
+    h3{
+      margin: .2rem 0 .5rem 0;
+      font-weight: bold;
+    }
+  }
+}
+
