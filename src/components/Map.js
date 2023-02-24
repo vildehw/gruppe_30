@@ -1,6 +1,6 @@
-import recources from "./ressurser"
+import resources from "./ressurser"
 
-export default function Map(recources){
+export default function Map(resources){
     return(
             <>
             {resources.filter((page) => (
