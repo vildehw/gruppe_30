@@ -1,8 +1,9 @@
 import './App.css';
 import './css/main.css'
-import Map from './components/Map';
-import resources from './components/ressurser';
 import Button from './components/Button';
+import Content from './components/Content';
+import resources from './components/ressurser';
+import Map from './components/Map';
 
 
 function App() {
@@ -15,9 +16,9 @@ function App() {
         </nav>
       </header>
     <main>
-
-      
-  
+      <ul>
+        <Map resources={resources}/>
+      </ul>
     </main> 
     </body>
   );

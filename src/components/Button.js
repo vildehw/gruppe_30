@@ -5,9 +5,6 @@ export default function Button({name}){
         
 
         resources.map((button) => <Buttons name={button.category}/>)
-        
-        
-            
     
     )
 }
