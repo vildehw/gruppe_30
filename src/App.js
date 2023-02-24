@@ -5,12 +5,19 @@ import resources from './components/ressurser';
 
 
 function App() {
-  return (
+  return ( 
+    <body> 
+      <header>
+        <nav>
+          <Button/>
+        </nav>
+      </header>
     <main>
 
       <Map resources={resources}/> 
   
-    </main>
+    </main> 
+    </body>
   );
 }
 
