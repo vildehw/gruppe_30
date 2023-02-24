@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import './css/main.css'
-import Button from './components/Button';
+import Map from './components/Map';
+import resources from './components/Ressurser';
+
 
 function App() {
-  return ( 
-    
-    <body> 
-      <header>
-      <h1>Ressursarkiv</h1>
-      </header>  
-      <nav>
-        <Button/>
-      </nav>
+  return (
     <main>
+
+      <Map resources={resources}/> 
   
-    <h1>hei</h1>
-    
     </main>
-    </body>
   );
 }
 
