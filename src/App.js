@@ -10,16 +10,16 @@ function App() {
   return ( 
     <body> 
       <header> 
-        <h1>Ressursarkiv</h1>
-        <nav>
-          <Button/>
-        </nav>
-      </header>
-    <main>
-      <ul>
-        <Map resources={resources}/>
-      </ul>
-    </main> 
+          <h1>Ressursarkiv</h1>
+      </header> 
+      <nav>
+        <Button/>
+      </nav>
+      <main>
+        <ul>
+          <Map resources={resources}/>
+        </ul>
+      </main> 
     </body>
   );
 }
