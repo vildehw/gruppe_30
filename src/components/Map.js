@@ -6,7 +6,7 @@ export default function Map({resources}){
     return(
             <>
             {resources.filter((page) => (
-                page.category.includes("cms"))).map(
+                page.category.includes("css"))).map(
                     (info) => (
                         <Content
                         category = {info.category}

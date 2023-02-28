@@ -1,26 +1,21 @@
+
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import './css/main.css'
-import Button from './components/Button';
-import Content from './components/Content';
-import resources from './components/ressurser';
-import Map from './components/Map';
+import ContentPage from './components/ContentPage';
+import Layout from './components/Layout';
 
 
-function App() {
+function App() { 
+ 
   return ( 
-    <body> 
-      <header> 
-          <h1>Ressursarkiv</h1>
-      </header> 
-      <nav>
-        <Button/>
-      </nav>
-      <main>
-        <ul>
-          <Map resources={resources}/>
-        </ul>
-      </main> 
-    </body>
+    <>  
+    <Routes>
+      <Route path='/' element={<Layout/>}>
+        <Route path=':slug' element={<ContentPage/>}/>
+      </Route>
+    </Routes>
+    </>
   );
 }
 
