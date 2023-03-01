@@ -1,27 +1,29 @@
 import './App.css';
-import './css/main.css'
-import Button from './components/Button';
-import Content from './components/Content';
+import './css/main.css';
+
 import resources from './components/ressurser';
-import Map from './components/Map';
+import React, { useState } from 'react';
+import CategoryButton from './components/CategoryButton';
+import ArticleCard from './components/ArticleCard';
+import Layout from './components/Layout';
 
+const ResourceCards = () => {
+  const categories = [...new Set(resources.map((resource) => resource.category))];
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
-function App() {
-  return ( 
-    <body> 
-      <header> 
-          <h1>Ressursarkiv</h1>
-      </header> 
-      <nav>
-        <Button/>
-      </nav>
-      <main>
-        <ul>
-          <Map resources={resources}/>
-        </ul>
-      </main> 
-    </body>
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
+  return (
+   <>
+      <CategoryButton categories={categories} handleCategoryClick={handleCategoryClick} />
+      
+    <Layout>
+      <ArticleCard resources={resources} selectedCategory={selectedCategory} />
+    </Layout>
+    </>
   );
-}
+};
 
-export default App;
+export default ResourceCards;
