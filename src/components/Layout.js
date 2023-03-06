@@ -1,18 +1,18 @@
+import { Link, Outlet } from "react-router-dom";
 
 
-export default function Layout({children}){
+export default function Layout(){
     return(
         
         <div className="container">
         <header>
-            <h1>ressursarkiiv</h1> 
-            <nav> 
             
-            </nav>
+            <h1>Ressursarrrrkiv</h1>
+             
         </header> 
-        <main>
-            {children}
-        </main> 
+       
+            <Outlet/>
+         
         </div>
         
     )

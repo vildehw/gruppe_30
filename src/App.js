@@ -1,13 +1,16 @@
 
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout';
 import Main from './components/Main';
 
 function App() {
   return ( 
-    <Layout>
-      <Main/>
-    </Layout>
+    <Routes> 
+      <Route path='/' element={<Layout/>}>
+        <Route path=':slug' element={<Main/>}/>
+    </Route>
+  </Routes>
     
   );
 }
