@@ -8,7 +8,7 @@ const ArticleCard = ({ resources, selectedCategory }) => {
         .map((resource, index) => (
           <div key={index}>
             <h3>{resource.title}</h3>
-            <p>{resource.url}</p>
+            <a href={resource.url}>{resource.url}</a>
           </div>
         ))}
     </article>
