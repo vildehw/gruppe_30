@@ -22,6 +22,15 @@ const ResourceCards = () => {
     <Layout>
       <ArticleCard resources={resources} selectedCategory={selectedCategory} />
     </Layout>
+
+
+   
+    <Routes>
+      <Route path='/' element={<Layout/>}>
+        <Route path=':slug' element={<ContentPage/>}/>
+      </Route>
+    </Routes>
+
     </>
   );
 };
