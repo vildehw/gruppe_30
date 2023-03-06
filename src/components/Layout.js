@@ -15,9 +15,9 @@ const Layout = ({ categories, handleCategoryClick, children }) => {
       <nav>
       </nav>
       <main>
-        <h2>
-       
-        </h2>
+        <h3>
+          
+        </h3>
         {children}
         
       </main>
