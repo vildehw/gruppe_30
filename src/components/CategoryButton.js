@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CategoryButton = ({ categories, handleCategoryClick }) => {
   return (
-    <div>
+    <nav>
       {categories.map((category, index) => (
-        <button key={index} onClick={() => handleCategoryClick(category)}>
-          {category}
-        </button>
+        <Link key={index} to={`/resources/${category}`}>
+          <button onClick={() => handleCategoryClick(category)}>
+            {category}
+          </button>
+        </Link>
       ))}
-    </div>
+    </nav>
   );
 };
 

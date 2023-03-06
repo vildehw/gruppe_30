@@ -1,26 +1,16 @@
 import React from 'react';
-
-
-
+import { Link } from 'react-router-dom';
 import CategoryButton from './CategoryButton';
 
-const Layout = ({ categories, handleCategoryClick, children }) => {
+const Layout = ({ children }) => {
   return (
-    <div className='containerr'>
+    <div className="containerr">
       <header>
-      
-    <h1>Ressursarkiv</h1>
-  
-      </header>
-      <nav>
-        
-      </nav>
-      <main>
-        <h2>
        
-        </h2>
-        {children}
-      </main>
+       
+       
+      </header>
+      <main>{children}</main>
     </div>
   );
 };

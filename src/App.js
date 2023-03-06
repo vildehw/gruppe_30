@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import CategoryButton from './components/CategoryButton';
 import ArticleCard from './components/ArticleCard';
 import Layout from './components/Layout';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const ResourceCards = () => {
   const categories = [...new Set(resources.map((resource) => resource.category))];
@@ -16,23 +17,17 @@ const ResourceCards = () => {
   };
 
   return (
-   <>
-      <CategoryButton categories={categories} handleCategoryClick={handleCategoryClick} />
-      
     <Layout>
-      <ArticleCard resources={resources} selectedCategory={selectedCategory} />
+      <h1>Ressursarkiv</h1>
+      <CategoryButton categories={categories} handleCategoryClick={handleCategoryClick} />
+      <Routes>
+        <Route exact path="/" element={<ArticleCard resources={resources} selectedCategory={selectedCategory} />} />
+        <Route path="/resources/:category" element={<ArticleCard resources={resources} selectedCategory={selectedCategory} />} />
+      </Routes>
     </Layout>
-
-
-   
-    <Routes>
-      <Route path='/' element={<Layout/>}>
-        <Route path=':slug' element={<ContentPage/>}/>
-      </Route>
-    </Routes>
-
-    </>
   );
 };
 
 export default ResourceCards;
+
+
