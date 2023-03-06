@@ -5,9 +5,10 @@ import Layout from './components/Layout';
 import Main from './components/Main';
 
 function App() {
-  return ( 
+  return (  
     <Routes> 
-      <Route path='/' element={<Main/>}>
+      <Route element={<Layout/>}> 
+      <Route index element={<Main/>}/>
         <Route path=':slug' element={<Main/>}/>
     </Route>
   </Routes>

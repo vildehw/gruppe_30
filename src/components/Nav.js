@@ -6,7 +6,7 @@ export default function Nav({navCat, handleFilter}){
     return(
         <ul>
             {navCat.map((item, index) => (
-                <NavLink key={index} to={item}><button onClick={handleFilter}>{item}</button></NavLink>
+                <NavLink key={index} to={item}><button >{item}</button></NavLink>
             ))}  
 
         </ul>  

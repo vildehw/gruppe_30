@@ -7,7 +7,8 @@ import { useParams } from "react-router-dom"
 export default function Main(){  
     const [filter, setFilter] = useState("Ressurser") 
     const [resultat, setResultat] = useState([])
-    const navCat = [...new Set(resources.map((e) => e.category))] 
+    const navCat = [...new Set(resources.map((e) => e.category))]  
+    //const { slug } = useParams();
    
 
     const getCategory = () =>{
