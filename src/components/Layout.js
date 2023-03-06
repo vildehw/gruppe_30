@@ -13,13 +13,13 @@ const Layout = ({ categories, handleCategoryClick, children }) => {
   
       </header>
       <nav>
-        
       </nav>
       <main>
         <h2>
        
         </h2>
         {children}
+        
       </main>
     </div>
   );

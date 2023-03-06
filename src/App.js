@@ -14,7 +14,7 @@ const ResourceCards = () => {
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-  };
+  }; 
 
   return (
    <>
