@@ -28,8 +28,9 @@ export default function Main(){
 
     return( 
         <> 
-            
-            <Nav navCat={navCat} handleFilter={handleFilter}/>  
+            <nav>
+            <Nav navCat={navCat} handleFilter={handleFilter}/>   
+            </nav>
             <main>
             <h2>{filter}</h2> 
             {resultat?.map((item, index) =>(
