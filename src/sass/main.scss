@@ -1,7 +1,4 @@
-$red: #DA291C;
-$yellow: #FFD700;
 $blue: #78e7f3;
-$green: #00AF4D;
 $white: #FFFFFF;
 $black: #000000;
 $gray: #ededed;
@@ -10,10 +7,7 @@ $maxwidth: 1200px;
 $rootsize: 20px;
 
 :root {
-  --red: #{$red};
-  --yellow: #{$yellow};
   --blue: #{$blue};
-  --green: #{$green};
   --white: #{$white};
   --black: #{$black};
   --gray: #{$gray};
@@ -92,8 +86,6 @@ a.active button{
       }
     }
   }
-
-
 main{
   display: flex;
   flex-wrap: wrap;
