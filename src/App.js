@@ -3,26 +3,26 @@ import './css/main.css';
 
 import resources from './components/ressurser';
 import React, { useState } from 'react';
-import CategoryButton from './components/CategoryButton';
-import ArticleCard from './components/ArticleCard';
+import Knapp from './components/Knapp';
+import Article from './components/Article';
 import Layout from './components/Layout';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const ResourceCards = () => {
   const categories = [...new Set(resources.map((resource) => resource.category))];
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [Kategorivalg, setKategorivalg] = useState(categories[0]);
 
-  const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
+  const Knappetrykk = (category) => {
+    setKategorivalg(category);
   };
 
   return (
     <Layout>
       
-      <CategoryButton categories={categories} handleCategoryClick={handleCategoryClick} />
+      <Knapp categories={categories} Knappetrykk={Knappetrykk} />
       <Routes>
-        <Route exact path="/" element={<ArticleCard resources={resources} selectedCategory={selectedCategory} />} />
-        <Route path="/:category" element={<ArticleCard resources={resources} selectedCategory={selectedCategory} />} />
+        <Route exact path="/" element={<Article resources={resources} Kategorivalg={Kategorivalg} />} />
+        <Route path="/:category" element={<Article resources={resources} Kategorivalg={Kategorivalg} />} />
       </Routes>
     </Layout>
   );

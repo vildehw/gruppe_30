@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ArticleCard = ({ resources, selectedCategory }) => {
+const Article = ({ resources, Kategorivalg }) => {
   return (
-    <article className="ArticleCard">  
+    <article className="Article">  
     <ul> 
-      <h3>{selectedCategory}</h3>
+      <h3>{Kategorivalg}</h3>
       {resources
-        .filter((resource) => resource.category === selectedCategory)
+        .filter((resource) => resource.category === Kategorivalg)
         .map((resource, index) => (
           <li key={index}>
             
@@ -18,4 +18,4 @@ const ArticleCard = ({ resources, selectedCategory }) => {
   );
 };
 
-export default ArticleCard;
+export default Article;

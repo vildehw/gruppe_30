@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CategoryButton from './CategoryButton';
+import Knapp from './Knapp';
 
 const Layout = ({ children }) => {
   return (
