@@ -10,10 +10,8 @@ const Layout = ({ children }) => {
        <h1>Ressursarkiv</h1>
        
       </header> 
-      <nav>
-    
-      </nav>
-      <main>{children}</main>
+      
+      {children}
     </div>
   );
 };

@@ -18,7 +18,6 @@ const ResourceCards = () => {
 
   return (
     <Layout>
-      
       <Knapp categories={categories} Knappetrykk={Knappetrykk} />
       <Routes>
         <Route exact path="/" element={<Article resources={resources} Kategorivalg={Kategorivalg} />} />
