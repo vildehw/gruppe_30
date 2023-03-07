@@ -7,10 +7,10 @@ import Main from './components/Main';
 function App() {
   return (  
     <Routes> 
-      <Route element={<Layout/>}> 
-      <Route index element={<Main/>}/>
+      
+      <Route path='/' element={<Main/>}/>
         <Route path=':slug' element={<Main/>}/>
-    </Route>
+    
   </Routes>
     
   );
