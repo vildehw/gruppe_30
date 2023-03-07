@@ -12,10 +12,6 @@
 }
 
 body {
-
-
-  background-color: aqua;
-
   background-color: var(--white);
   font-family: sans-serif;
   font-size: var(--rootsize);
@@ -25,7 +21,7 @@ body {
   padding-bottom: 0;
 }
 
-div.container {
+div.containerr {
   width: 100%;
   max-width: var(--maxwidth);
   margin: 0 auto;
@@ -52,6 +48,11 @@ nav {
   width: 100%;
   margin-top: 3rem;
 }
+nav a.active button {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}
 nav button {
   background-color: var(--gray);
   color: var(--graydark);
@@ -70,12 +71,7 @@ nav button:hover {
   color: var(--yellow);
   border-color: var(--yellow);
 }
-nav button.active {
-  background-color: var(--blue);
-  border-color: var(--blue);
-  color: var(--white);
-}
-nav button.active:hover {
+nav button:hover {
   color: var(--white);
 }
 
@@ -85,12 +81,7 @@ main {
   padding: 0 0rem;
   justify-content: space-between;
 }
-main h2 {
-  width: 100%;
-  display: block;
-  text-align: center;
-}
-main article.product-card {
+main article.Article {
   background: var(--white);
   border: 0.1rem solid var(--gray);
   border-top: 0.5rem solid var(--blue);
@@ -101,14 +92,13 @@ main article.product-card {
   color: var(--graydark);
   margin-bottom: 2rem;
 }
-main article.product-card > * {
+main article.Article > * {
   display: block;
   clear: both;
 }
-main article.product-card h3 {
+main article.Article h3 {
   margin: 0.2rem 0 0.5rem 0;
   font-weight: bold;
-
 }
 
 /*# sourceMappingURL=main.css.map */

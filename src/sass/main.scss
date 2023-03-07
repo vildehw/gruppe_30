@@ -32,7 +32,7 @@ body{
   padding-bottom: 0;
 }
 
-div.container{
+div.containerr{
   width: 100%;
   max-width: var(--maxwidth);
   margin: 0 auto;
@@ -60,6 +60,12 @@ nav{
   width: 100%;
   margin-top: 3rem;
 
+a.active button{
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+  }
+
   button{
     background-color: var(--gray);
     color: var(--graydark);
@@ -79,17 +85,14 @@ nav{
       border-color: var(--yellow);
     }
 
-    &.active{
-      background-color: var(--blue);
-      border-color: var(--blue);
-      color: var(--white);
+  
 
       &:hover{
         color: var(--white);
       }
     }
   }
-}
+
 
 main{
   display: flex;
@@ -97,13 +100,9 @@ main{
   padding: 0 0rem;
   justify-content: space-between;
 
-  h2{
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
 
-  article.product-card{
+
+  article.Article{
     background:var(--white) ;
     border: .1rem solid var(--gray);
     border-top: .5rem solid var(--blue);
