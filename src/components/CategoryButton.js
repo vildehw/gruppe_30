@@ -5,10 +5,8 @@ const CategoryButton = ({ categories, handleCategoryClick }) => {
   return (
     <nav>
       {categories.map((category, index) => (
-        <Link key={index} to={`/resources/${category}`}>
-          <button onClick={() => handleCategoryClick(category)}>
-            {category}
-          </button>
+        <Link key={index} to={`/${category}`}>
+          <button onClick={() => handleCategoryClick(category)}>{category}</button>
         </Link>
       ))}
     </nav>

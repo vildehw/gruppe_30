@@ -18,11 +18,11 @@ const ResourceCards = () => {
 
   return (
     <Layout>
-      <h1>Ressursarkiv</h1>
+      
       <CategoryButton categories={categories} handleCategoryClick={handleCategoryClick} />
       <Routes>
         <Route exact path="/" element={<ArticleCard resources={resources} selectedCategory={selectedCategory} />} />
-        <Route path="/resources/:category" element={<ArticleCard resources={resources} selectedCategory={selectedCategory} />} />
+        <Route path="/:category" element={<ArticleCard resources={resources} selectedCategory={selectedCategory} />} />
       </Routes>
     </Layout>
   );

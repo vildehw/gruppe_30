@@ -7,9 +7,12 @@ const Layout = ({ children }) => {
     <div className="containerr">
       <header>
        
+       <h1>Ressursarkiv</h1>
        
-       
-      </header>
+      </header> 
+      <nav>
+    
+      </nav>
       <main>{children}</main>
     </div>
   );
