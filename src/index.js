@@ -15,3 +15,5 @@ createRoot(document.getElementById("root")).render(
 );
 
 reportWebVitals();
+
+//https://www.sharooq.com/react-18-how-to-write-the-root-index-js

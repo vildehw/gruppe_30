@@ -1,8 +1,5 @@
 :root {
-  --red: #DA291C;
-  --yellow: #FFD700;
   --blue: #78e7f3;
-  --green: #00AF4D;
   --white: #FFFFFF;
   --black: #000000;
   --gray: #ededed;
@@ -124,6 +121,7 @@ main article.Article h3 {
     padding: 1rem 1rem;
   }
   article.Article {
+    border-top: 1px solid var(--graydark);
     margin-bottom: 3rem;
     font-size: 20px;
     margin-top: 3rem;
