@@ -12,10 +12,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const ResourceCards = () => {
   const categories = [...new Set(resources.map((resource) => resource.category))];
   const [Kategorivalg, setKategorivalg] = useState(categories[0]);
+  // kodebiten over er hentet fra forelesningen 28.20.2023
 
   const Knappetrykk = (category) => {
     setKategorivalg(category);
   };
+  // kodebiten over er hentet fra forelesningen 28.20.2023
 
   return (
     <Layout>
