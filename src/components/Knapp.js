@@ -7,7 +7,7 @@ const Knapp = ({ categories, Knappetrykk }) => {
     <nav>
       {categories.map((category, index) => (
         <NavLink key={index} to={category}>
-          {/* kilde til bruk av navlink:https://reactrouter.com/en/main/components/nav-link */}
+          {/* kilde brukt til navlinks :https://reactrouter.com/en/main/components/nav-link */}
           <button onClick={() => Knappetrykk(category)}>{category}</button>
         </NavLink>
       ))}

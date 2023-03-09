@@ -11,12 +11,13 @@ const Article = ({ resources, Kategorivalg }) => {
             <li key={index}>
               <a href={resource.url}>{resource.title}</a>
             </li>
-          ))} 
+          ))}  
         </ul>
       </article> 
     </main>
   );
-};
+}; 
+// kilde for kode er forelesningen 28.20.2023
 
 export default Article;
  

@@ -12,21 +12,22 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const ResourceCards = () => {
   const categories = [...new Set(resources.map((resource) => resource.category))];
   const [Kategorivalg, setKategorivalg] = useState(categories[0]);
-  // kodebiten over er hentet fra forelesningen 28.20.2023
+  // kilde for kode er forelesningen 28.20.2023
 
   const Knappetrykk = (category) => {
     setKategorivalg(category);
   };
-  // kodebiten over er hentet fra forelesningen 28.20.2023
+  // kilde for kode er forelesningen 28.20.2023
 
   return (
     <Layout>
       <Knapp categories={categories} Knappetrykk={Knappetrykk} />
       <Routes>
-        <Route exact path="/" element={<Article resources={resources} Kategorivalg={Kategorivalg} />} />
-        <Route path="/:category" element={<Article resources={resources} Kategorivalg={Kategorivalg} />} />
+        <Route path="/" element={<Article resources={resources} Kategorivalg={Kategorivalg} />} />
+        <Route path=":category" element={<Article resources={resources} Kategorivalg={Kategorivalg} />} />
       </Routes>
-    </Layout>
+    </Layout> 
+    //kilde brukt til routing https://refine.dev/blog/react-router-useparams/#setting-up-react-router 
   );
 };
 
